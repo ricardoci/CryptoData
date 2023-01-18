@@ -1,1 +1,1 @@
-# CryptoProject
+# Crypto Weather
