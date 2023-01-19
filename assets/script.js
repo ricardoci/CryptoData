@@ -2,6 +2,7 @@ let cryptoData;
 const searchBar = document.querySelector('#search-bar');
 const searchButton = document.querySelector('#search-button');
 
+
 function api(event) {
   event.preventDefault()
   
@@ -31,7 +32,7 @@ function api(event) {
             cryptoData = data;
             useData()
         
-            console.log( 'Price: ' + data.quotes.USD.price,'Rank:' + data.rank,'1hrPercentChange:' + data.quotes.USD.percent_change_1h + '%' ,'24hrPercentChange:'  + data.quotes.USD.percent_change_24h + '%', 'Total Supply: ' + data.max_supply,);
+
 
         }
         else{
@@ -57,5 +58,5 @@ function api(event) {
 searchButton.addEventListener('click', api)
 
 function useData(){
-    console.log(cryptoData.quotes.USD.price)
+
 }

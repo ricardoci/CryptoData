@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.appWrapper{
+    display:flex;
+    background-color: dimgrey;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.submitWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height:40rem;
+    background-color: #177c72;
+    border-radius: 20px;
+
+}
+.cryptoBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #093f50;
+    height:18rem;
+    width:18rem;
+    border-radius: 10px;
+    margin-bottom: 5rem;
+    padding-left: 3px;
+}
+.allCryptodata{
+    align-items: center;
+    justify-content: center;
+    color:antiquewhite;
+    
+}
+.cryptoName{
+    font-size: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin:0;
+    margin-bottom: 2rem;
+}
+input {
+    border-radius: 5px;
+    height: 1.5rem;
+    background-color: darkgray;
+    outline: none;
+    outline: none;
+    border-style: none;
+    
+    
+}
+#search-button{
+    cursor: pointer;
+}
+#search-button:hover{
+    background-color:darkgoldenrod;
+    
+}
