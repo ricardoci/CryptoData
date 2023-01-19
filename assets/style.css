@@ -2,7 +2,9 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 .appWrapper{
     display:flex;
     background-color: dimgrey;
@@ -31,6 +33,7 @@
     width:15rem;
     border-radius: 10px;
     margin-bottom: 5rem;
+    padding-left: 10px;
 }
 .allCryptodata{
     align-items: center;
