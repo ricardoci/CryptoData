@@ -23,6 +23,7 @@
 
 }
 .cryptoBox{
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #093f50;
@@ -35,4 +36,13 @@
     align-items: center;
     justify-content: center;
     color:antiquewhite;
+    
+}
+.cryptoName{
+    font-size: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin:0;
+    margin-bottom: 2rem;
 }
