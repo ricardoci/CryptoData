@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.appWrapper{
+    display:flex;
+    background-color: dimgrey;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.submitWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height:40rem;
+    background-color: #177c72;
+    border-radius: 20px;
+
+}
+.cryptoBox{
+    align-items: center;
+    justify-content: center;
+    background-color: #093f50;
+    height:15rem;
+    width:15rem;
+    border-radius: 10px;
+    margin-bottom: 5rem;
+}
+.allCryptodata{
+    align-items: center;
+    justify-content: center;
+    color:antiquewhite;
+}
