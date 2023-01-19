@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
 }
 
 .appWrapper{
@@ -29,11 +29,11 @@
     align-items: center;
     justify-content: center;
     background-color: #093f50;
-    height:15rem;
-    width:15rem;
+    height:18rem;
+    width:18rem;
     border-radius: 10px;
     margin-bottom: 5rem;
-    padding-left: 10px;
+    padding-left: 3px;
 }
 .allCryptodata{
     align-items: center;
@@ -48,4 +48,21 @@
     justify-content: center;
     margin:0;
     margin-bottom: 2rem;
+}
+input {
+    border-radius: 5px;
+    height: 1.5rem;
+    background-color: darkgray;
+    outline: none;
+    outline: none;
+    border-style: none;
+    
+    
+}
+#search-button{
+    cursor: pointer;
+}
+#search-button:hover{
+    background-color:darkgoldenrod;
+    
 }
