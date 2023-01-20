@@ -35,6 +35,17 @@
     margin-bottom: 5rem;
     padding-left: 3px;
 }
+.weatherBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #093f50;
+    height:18rem;
+    width:18rem;
+    border-radius: 10px;
+    margin-bottom: 5rem;
+    padding-left: 3px;
+}
 .allCryptodata{
     align-items: center;
     justify-content: center;
@@ -43,6 +54,15 @@
 }
 .cryptoName{
     font-size: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin:0;
+    margin-bottom: 2rem;
+}
+.weather{
+    font-size: 2rem;
+    color: antiquewhite;
     display: flex;
     align-content: center;
     justify-content: center;
