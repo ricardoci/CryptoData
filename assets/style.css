@@ -66,6 +66,9 @@ input {
     background-color:darkgoldenrod;
     
 }
-.top5{
+.top5 p{
+    margin: 10px;
+    font-size: 15px;
+    
     
 }

@@ -102,7 +102,7 @@ function getTop5() {
       top5Data = data;
       let top5 = '';
       data.forEach(crypto => {
-        top5 += `<li>${crypto.name} (Rank: ${crypto.rank})</li>`;
+        top5 += `<p>Rank: ${crypto.rank}  ${crypto.name} </p>`;
       });
       top5Container.innerHTML = top5;
     });
@@ -113,14 +113,14 @@ getTop5();
 
 // it should not return after it is click again
 searchButton.addEventListener('click', function() {
-  if(top5Container.style.display === "none" && data !== null) {
+  if(top5Container.style.display === "none" &&  data !== null) {
     top5Container.style.display = "block";
     let top5 = '';
     top5Data.forEach(crypto => {
-      top5 += `<li>${crypto.name} (Rank: ${crypto.rank})</li>`;
+      top5 += `<p>${crypto.name} (Rank: ${crypto.rank})</p>`;
     });
     top5Container.innerHTML = top5;
-  } else {
+  } else{
     top5Container.style.display = "none";
   }
 });
