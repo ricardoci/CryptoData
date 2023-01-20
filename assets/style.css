@@ -66,3 +66,7 @@ input {
     background-color:darkgoldenrod;
     
 }
+
+.form_hidden {
+    display: none;
+}

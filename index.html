@@ -5,9 +5,10 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<!-- // Crypto card -->
 <div class="appWrapper">
-    <div class="submitWrapper">
-        <div class="cryptoBox">
+    <div class="submitWrapper" id="cryptoCard">
+        <div class="cryptoBox" id="cryptoButton">
             <div class="allCryptoData">
                 <div class="cryptoName">Crypto </div>
                 <div class="price"></div>
@@ -28,9 +29,36 @@
             </div>
         </div>
     </div>
+
+ <!-- // weather card -->
+
+    <div class="submitWrapper form_hidden" id="weatherCard">
+        <div class="cryptoBox" id="weatherButton">
+            <div class="allCryptoData">
+                <div class="cryptoName">Weather </div>
+                <div class="price"></div>
+                <div class="rank"></div>
+                <div class="hourly"></div>
+                <div class="daily"></div>
+                <div class="supply"></div>
+            </div>
+        </div>
+
+
+        <div class="submitForm">
+            <div class="bar">
+                <form>
+                    <input type="text"  placeholder="btc-bitcoin"  id="search-bar">
+                    <input type="submit" id="search-button" value="Search">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="assets/script.js"></script>
+<script src="assets/Toggle.js"></script>
 
 </body>
 </html>
