@@ -66,9 +66,14 @@ input {
     background-color:darkgoldenrod;
     
 }
+
 .top5 p{
     margin: 10px;
     font-size: 15px;
     
     
+}
+
+.form_hidden {
+    display: none;
 }
