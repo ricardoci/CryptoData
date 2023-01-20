@@ -13,8 +13,7 @@ function api(event) {
     
     var requestUrl1 = `https://api.coinpaprika.com/v1/tickers/${query}`;
     
-   
-     
+    
     searchBar.value = '';
 
   
@@ -29,9 +28,11 @@ function api(event) {
       })
       .then(function (data) {
         
+        
         if(data !== null){
             cryptoData = data;
             useData()
+            
         
 
 
@@ -66,6 +67,10 @@ function useData(){
     const daily = cryptoData.quotes.USD.percent_change_24h;
     const supply = cryptoData.max_supply;
     
+
+    
+    
+    
     const cryptoName = document.querySelector('.cryptoName')
     const priceEl = document.querySelector('.price');
     const rankEl = document.querySelector('.rank');
@@ -73,7 +78,7 @@ function useData(){
     const dailyEl = document.querySelector('.daily');
     const supplyEl = document.querySelector('.supply');
     
-    
+   
     cryptoName.textContent = `${name}`
     priceEl.textContent = `Price: ${price}`;
     rankEl.textContent = `Rank: ${rank}`;
@@ -82,3 +87,40 @@ function useData(){
     supplyEl.textContent = `Total Supply: ${supply}`;
 
 }
+
+const top5Container = document.querySelector('.top5');
+
+
+
+
+let top5Data;
+
+function getTop5() {
+  fetch('https://api.coinpaprika.com/v1/tickers?limit=5&sort=rank')
+    .then(response => response.json())
+    .then(data => {
+      top5Data = data;
+      let top5 = '';
+      data.forEach(crypto => {
+        top5 += `<li>${crypto.name} (Rank: ${crypto.rank})</li>`;
+      });
+      top5Container.innerHTML = top5;
+    });
+}
+
+getTop5();
+
+
+// it should not return after it is click again
+searchButton.addEventListener('click', function() {
+  if(top5Container.style.display === "none" && data !== null) {
+    top5Container.style.display = "block";
+    let top5 = '';
+    top5Data.forEach(crypto => {
+      top5 += `<li>${crypto.name} (Rank: ${crypto.rank})</li>`;
+    });
+    top5Container.innerHTML = top5;
+  } else {
+    top5Container.style.display = "none";
+  }
+});
