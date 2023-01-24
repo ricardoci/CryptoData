@@ -3,9 +3,9 @@ const searchBar = document.querySelector('#search-bar');
 const searchButton = document.querySelector('#search-button');
 const cryptoInfo = document.querySelector('.cryptoInfo');
 const cryptoName = document.querySelector('.cryptoName');
-const watchButton = document.querySelector('#watchButton');
 const watchListPage = document.querySelector('.watchListPage');
-const keyDelete = document.querySelector('.keyDelete');
+const keyDelete = document.querySelector('#keyDelete');
+
 
 
 
@@ -151,31 +151,42 @@ function watchlist(){
   
 }
 
-watchButton.addEventListener('click', function() {
+
+
+  function watchButton() {
 
   
   watchListPage.style.display = "block";
   let list = '';
   for(let i = 0; i < localStorage.length; i++){
+   
+
     let key = localStorage.key(i);
     let value = localStorage.getItem(key);
-    
-
-  
-      list += `<p>  ${value}</p> <button >remove</button>`;
-      watchListPage.innerHTML = list;
-    };
-    
-
+    globalKey = key;
+      globalValue = value;
    
-  });
-
-
-
-  // keyDelete.addEventListener('click', function() {
-  //   const key = document.querySelector('#key-input').value;
-  //   localStorage.removeItem(key);
   
-  // });
+      list += `<p>  ${value}</p> <button id="${key}" onClick="keyDelete">remove</button>`;
+      
+      watchListPage.innerHTML = list;
+      
 
+     
   
+      
+    
+      }
+    }
+  
+    
+
+    watchListPage.addEventListener("click", function(e) {
+       
+        localStorage.removeItem(e.target.id);
+        
+
+    
+    });
+    
+    
