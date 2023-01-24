@@ -5,7 +5,7 @@ const cryptoInfo = document.querySelector('.cryptoInfo');
 const cryptoName = document.querySelector('.cryptoName');
 const watchListPage = document.querySelector('.watchListPage');
 const keyDelete = document.querySelector('#keyDelete');
-
+const exitButton = document.querySelector('.exitButton');
 
 
 
@@ -154,8 +154,9 @@ function watchlist(){
 
 
   function watchButton() {
+    
 
-  
+    exitButton.style.display = 'block';
   watchListPage.style.display = "block";
   let list = '';
   for(let i = 0; i < localStorage.length; i++){
@@ -171,6 +172,7 @@ function watchlist(){
       
       watchListPage.innerHTML = list;
       
+      
 
      
   
@@ -182,11 +184,18 @@ function watchlist(){
     
 
     watchListPage.addEventListener("click", function(e) {
-       
+      
+      if(e.target.tagName === 'BUTTON') {
         localStorage.removeItem(e.target.id);
-        
+        e.target.previousElementSibling.remove();
+       e.target.remove();
+       
 
-    
+      }
     });
     
-    
+    function exit(){
+      watchListPage.style.display = "none";
+      exitButton.style.display = 'none';
+
+    }
