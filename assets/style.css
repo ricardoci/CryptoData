@@ -145,7 +145,6 @@ input {
 
 .exitButton{
     position: fixed;
-    
     display: none;
     background-color: antiquewhite;
     cursor: pointer;
