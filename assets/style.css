@@ -32,7 +32,7 @@
     height:18rem;
     width:18rem;
     border-radius: 10px;
-    margin-bottom: 5rem;
+    
     padding-left: 3px;
 }
 .allCryptodata{
@@ -61,6 +61,7 @@ input {
 }
 #search-button{
     cursor: pointer;
+    width: 4rem;
 }
 #search-button:hover{
     background-color:darkgoldenrod;
@@ -76,4 +77,85 @@ input {
 
 .form_hidden {
     display: none;
+}
+.watchList{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.watchList button{
+    border-radius: 5px;
+    border-style: none;
+    width: 6rem;
+    background-color: darkgray;
+}
+.watchList button:hover{
+    background-color:darkgoldenrod;
+    cursor: pointer;
+}
+.watchListPage{
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+    min-width: 30rem;
+    min-height:40rem;
+    background-color: #177c72;
+    border-radius: 20px;
+    display: none;
+    
+    
+
+}
+.watchListPage p{
+    color: beige;
+    font-size: 10px;
+    background-color: #093f50;
+    height:10rem;
+    width:10rem;
+    border-radius: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+   display: inline-block;
+    
+    
+    
+   
+}
+.watchListPage button{
+    border-style: none;
+    border-radius: 5px;
+    display: inline-block;
+    
+    
+}
+.watchListPage button:hover{
+    background-color:darkgoldenrod;
+    cursor: pointer;
+
+}
+.watchlistwrap{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.exitButton{
+    position: fixed;
+    
+    display: none;
+    background-color: antiquewhite;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: none;
+    bottom: 30%;
+    min-width: 3rem;
+    
+    
+}
+.exitButton:hover{
+    background-color:darkgoldenrod;
 }

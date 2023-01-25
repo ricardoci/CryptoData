@@ -1,12 +1,17 @@
 let cryptoData;
 const searchBar = document.querySelector('#search-bar');
 const searchButton = document.querySelector('#search-button');
-const data = document.querySelector('data');
+const cryptoInfo = document.querySelector('.cryptoInfo');
+const cryptoName = document.querySelector('.cryptoName');
+const watchListPage = document.querySelector('.watchListPage');
+const keyDelete = document.querySelector('#keyDelete');
+const exitButton = document.querySelector('.exitButton');
+
 
 
 function api(event) {
   event.preventDefault()
-  
+  clicked = true;
     const query = searchBar.value.toLowerCase();
     
  
@@ -57,11 +62,18 @@ function api(event) {
  
 };
 
+let clicked = false;
 searchButton.addEventListener('click', api)
 
+
 function useData(){
-  const name = cryptoData.name
-  const price = cryptoData.quotes.USD.price;
+ 
+ 
+
+
+    const name = cryptoData.name
+    
+    const price = cryptoData.quotes.USD.price;
     const rank = cryptoData.rank;
     const hourly = cryptoData.quotes.USD.percent_change_1h;
     const daily = cryptoData.quotes.USD.percent_change_24h;
@@ -85,7 +97,8 @@ function useData(){
     hourlyEl.textContent = `1hr % Change: ${hourly}%`;
     dailyEl.textContent = `24hr % Change: ${daily}%`;
     supplyEl.textContent = `Total Supply: ${supply}`;
-
+   
+    watchlist()
 }
 
 const top5Container = document.querySelector('.top5');
@@ -113,7 +126,7 @@ getTop5();
 
 // it should not return after it is click again
 searchButton.addEventListener('click', function() {
-  if(top5Container.style.display === "none" &&  data !== null) {
+  if(top5Container.style.display === "none"  && cryptoData === !null ) {
     top5Container.style.display = "block";
     let top5 = '';
     top5Data.forEach(crypto => {
@@ -124,3 +137,65 @@ searchButton.addEventListener('click', function() {
     top5Container.style.display = "none";
   }
 });
+
+
+
+function watchlist(){
+  
+  addButton.addEventListener('click', function() {
+
+    var list = cryptoInfo.innerText;
+    localStorage.setItem(cryptoData.name, list);
+  })
+ 
+  
+}
+
+
+
+  function watchButton() {
+    
+
+    exitButton.style.display = 'block';
+  watchListPage.style.display = "block";
+  let list = '';
+  for(let i = 0; i < localStorage.length; i++){
+   
+
+    let key = localStorage.key(i);
+    let value = localStorage.getItem(key);
+    globalKey = key;
+      globalValue = value;
+   
+  
+      list += `<p>  ${value}</p> <button id="${key}" onClick="keyDelete">remove</button>`;
+      
+      watchListPage.innerHTML = list;
+      
+      
+
+     
+  
+      
+    
+      }
+    }
+  
+    
+
+    watchListPage.addEventListener("click", function(e) {
+      
+      if(e.target.tagName === 'BUTTON') {
+        localStorage.removeItem(e.target.id);
+        e.target.previousElementSibling.remove();
+       e.target.remove();
+       
+
+      }
+    });
+    
+    function exit(){
+      watchListPage.style.display = "none";
+      exitButton.style.display = 'none';
+
+    }
