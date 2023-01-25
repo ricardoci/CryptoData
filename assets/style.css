@@ -94,7 +94,6 @@ input {
 }
 .watchListPage{
    position: absolute;
-   
    align-items: center;
    justify-content: center;
     min-width: 30rem;
@@ -107,19 +106,15 @@ input {
 
 }
 .watchListPage p{
-    
     color: beige;
     font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #093f50;
     height:10rem;
     width:10rem;
     border-radius: 10px;
-    padding: 25px 0px 10px 3px;
+    padding: 15px;
     flex-wrap: wrap;
-    margin: .5rem auto;
+    margin: 1rem auto;
    display: inline-block;
     
     
