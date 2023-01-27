@@ -6,13 +6,6 @@
     font-family: monospace;
 }
 
- .day{
-    background-color: #cdc7c7;
-} 
-
-.night{
-    background-color: #212121;
-} 
 
 
 
@@ -170,7 +163,14 @@ input {
     background-color:darkgoldenrod;
 }
 
-.time {
+.date { 
+    margin-bottom: 5%;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+.time { 
     margin-bottom: 5%;
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
