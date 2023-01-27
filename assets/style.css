@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding: 0;
@@ -5,9 +6,18 @@
     font-family: monospace;
 }
 
+ .day{
+    background-color: #cdc7c7;
+} 
+
+.night{
+    background-color: #212121;
+} 
+
+
+
 .appWrapper{
     display:flex;
-    background-color: dimgrey;
     height: 100vh;
     width: 100%;
     align-items: center;
@@ -158,4 +168,11 @@ input {
 }
 .exitButton:hover{
     background-color:darkgoldenrod;
+}
+
+.time {
+    margin-bottom: 5%;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
 }
