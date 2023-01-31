@@ -6,8 +6,13 @@
     font-family: monospace;
 }
 
+.cityDay{
+background-image: url(/assets/cityDay.png);
+}
 
-
+.cityNight{
+    background-image: url(/assets/cityNight.png);
+    }
 
 .appWrapper{
     display:flex;
