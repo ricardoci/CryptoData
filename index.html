@@ -46,33 +46,34 @@
 
  <!-- // weather card -->
 
-    <div class="submitWrapper form_hidden" id="weatherCard">
-        <div class="date"></div>
-        <div class="time"></div>
-        <div class="cryptoBox" id="weatherButton">
-            <div class="allCryptoData">
-                <div class="cryptoName">Weather </div>
-                <div class="price"></div>
-                <div class="rank"></div>
-                <div class="hourly"></div>
-                <div class="daily"></div>
-                <div class="supply"></div>
-            </div>
-        </div>
-
-
-        <div class="submitForm">
-            <div class="bar">
-                <form>
-                    <input type="text"  placeholder="btc-bitcoin"  id="search-bar">
-                    <input type="submit" id="search-button" value="Search">
-                </form>
-            </div>
+ <div class="submitWrapper form_hidden" id="weatherCard">
+    <div class="weatherBox" id="weatherButton">
+        <div class="allWeatherData">
+            <div class="cityName">Weather </div>
+            <div class="temp"></div>
+            <div class="maxTemp"></div>
+            <div class="minTemp"></div>
+            <div class="humidity"></div>
+            <div class="windSpeed"></div>
+            <div class="clouds"></div>
         </div>
     </div>
-    <div class="watchlistwrap">
+
+
+    <div class="weatherSubmitForm">
+        <div class="weatherBar">
+            <form>
+                <input type="text"  placeholder="San Diego"  id="weather-search-bar">
+                <input type="submit" id="weather-search-button" value="Search">
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+<div class="watchlistwrap">
        
-    <div class="watchListPage">
+<div class="watchListPage">
       
     
     
@@ -91,6 +92,7 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="assets/script.js"></script>
 <script src="assets/Toggle.js"></script>
+<script src="assets/weatherApi.js"></script>
 
 </body>
 </html>
