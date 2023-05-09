@@ -7,11 +7,11 @@
 }
 
 .cityDay{
-background-image: url(./cityDay.png);
+background-image: url(/assets/img/cityDay.png);
 }
 
 .cityNight{
-    background-image: url(./cityNight.png);
+    background-image: url(/assets/img/cityNight.png);
     }
 
 .appWrapper{
@@ -199,4 +199,8 @@ input {
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
+}
+.allWeatherData{
+    color: white;
+    line-height:2rem;
 }
