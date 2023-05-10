@@ -7,11 +7,11 @@
 }
 
 .cityDay{
-background-image: url(public/img/cityDay.png);
+background-image: url(/public/img/cityDay.png);
 }
 
 .cityNight{
-    background-image: url(public/img/cityNight.png);
+    background-image: url(/public/img/cityNight.png);
     }
 
 .appWrapper{
